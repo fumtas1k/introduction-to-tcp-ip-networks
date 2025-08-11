@@ -19,4 +19,5 @@ RUN apt-get update \
     wget \
     iptables \
     procps \
-    isc-dhcp-client
+    isc-dhcp-client \
+    && apt-get clean
