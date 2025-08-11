@@ -1,8 +1,7 @@
-version: '3.8'
-
 services:
   ubuntu:
     build: .
+    container_name: tcp-ip-ubuntu
     working_dir: /var/tmp
     volumes:
       - ./work:/var/tmp
@@ -10,8 +9,9 @@ services:
     stdin_open: true
     privileged: true
     networks:
-      - intro-tcp-ip
+      - intro-tcp-ip-network
 
 networks:
-  intro-tcp-ip:
+  intro-tcp-ip-network:
+    name: intro-tcp-ip-network
     driver: bridge

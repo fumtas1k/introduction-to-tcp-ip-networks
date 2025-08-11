@@ -1,5 +1,6 @@
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 
+LABEL name="intro-tcp-ip-ubuntu"
 RUN apt-get update \
     && apt-get -y upgrade \
     && apt-get -y install \
