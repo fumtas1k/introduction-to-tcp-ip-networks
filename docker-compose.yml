@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  ubuntu:
+    build: .
+    working_dir: /var/tmp
+    volumes:
+      - ./work:/var/tmp
+    tty: true
+    stdin_open: true
+    privileged: true
+    networks:
+      - intro-tcp-ip
+
+networks:
+  intro-tcp-ip:
+    driver: bridge
